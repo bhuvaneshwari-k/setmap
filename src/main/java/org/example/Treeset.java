@@ -15,24 +15,24 @@ class Treeset {
             set.add(s.nextInt());
             i++;
         }
-        l.log(Level.INFO, "The number set is:"+set);
-        l.log(Level.INFO, "The size of the number set is:"+set.size());
+        l.log(Level.INFO,()-> "The number set is:"+set);
+        l.log(Level.INFO, ()->"The size of the number set is:"+set.size());
         l.info("Enter number to remove:");
         set.remove(s.nextInt());
-        l.log(Level.INFO, "After remove the set is:"+set);
+        l.log(Level.INFO,()-> "After remove the set is:"+set);
         l.info("Enter number to check:");
         if(set.contains(s.nextInt()))
             l.info("The number is present in the set");
         else
             l.info("The number is not present in the set");
-        l.log(Level.INFO,"Lowest Value: "+set.pollFirst());
-        l.log(Level.INFO,"Highest Value: "+set.pollLast());
-        l.log(Level.INFO,"Head Set: "+set.headSet(35, true));
-        l.log(Level.INFO,"SubSet: "+set.subSet(15, false, 35, true));
-        l.log(Level.INFO,"TailSet: "+set.tailSet(30, false));
-        l.log(Level.INFO,"Reverse Set: "+set.descendingSet());
+        l.log(Level.INFO,()->"Lowest Value: "+set.pollFirst());
+        l.log(Level.INFO,()->"Highest Value: "+set.pollLast());
+        l.log(Level.INFO,()->"Head Set: "+set.headSet(35, true));
+        l.log(Level.INFO,()->"SubSet: "+set.subSet(15, false, 35, true));
+        l.log(Level.INFO,()->"TailSet: "+set.tailSet(30, false));
+        l.log(Level.INFO,()->"Reverse Set: "+set.descendingSet());
         set.clear();
-        l.log(Level.INFO,"After clearing the set: "+set);
+        l.log(Level.INFO,()->"After clearing the set: "+set);
         if(set.isEmpty())
             l.info("The set is empty");
         else
