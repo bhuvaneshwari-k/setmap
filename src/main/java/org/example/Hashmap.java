@@ -42,7 +42,7 @@ public class Hashmap{
         map1.clear();
         l.log(Level.INFO,()-> "The Employee list after clear:"+map1);
         String empty=map1.isEmpty();
-        if(empty=="true"){
+        if(empty.equals("true")){
             l.info("The Employee list is Empty");
         }else
         {
