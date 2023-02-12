@@ -32,18 +32,22 @@ public class Hashmap{
         map.replace(103, "monsi");
         l.log(Level.INFO, ()->"The Employee list after replacing:"+map);
         map.replace(101, "bhuvana", "vijay");
-        l.log(Level.INFO, ()->"The Employee list after replacing:"+map);
+        l.log(Level.INFO, ()->"The Employee list after replacing the value:"+map);
         HashMap<Integer,String> map1=new HashMap<Integer,String>();
         map.put(105,"latha");
         map1.putAll(map);
         l.log(Level.INFO,()-> "The new Employee list:"+map1);
         map1.replaceAll((k,v) -> "jothi");
-        l.log(Level.INFO, ()-> "The Employee list after replacing:"+map1);
+        l.log(Level.INFO, ()-> "The Employee list after replacing all the values:"+map1);
         map1.clear();
         l.log(Level.INFO,()-> "The Employee list after clear:"+map1);
         if(map1.isEmpty())
+        {
             l.info("The Employee list is Empty");
+        }
         else
+        {
             l.info("The Employee list is Empty");
+        }
     }
 }
