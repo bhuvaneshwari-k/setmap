@@ -41,12 +41,11 @@ public class Hashmap{
         l.log(Level.INFO, ()-> "The Employee list after replacing all the values:"+map1);
         map1.clear();
         l.log(Level.INFO,()-> "The Employee list after clear:"+map1);
-        String empty=map1.isEmpty();
-        if(empty.equals("true")){
+        if(map1.isEmpty()){
             l.info("The Employee list is Empty");
         }else
         {
-            l.info("The Employee list is Empty");
+            l.info("The Employee list is not Empty");
         }
     }
 }
