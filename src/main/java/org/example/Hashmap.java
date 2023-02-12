@@ -22,25 +22,25 @@ public class Hashmap{
             map.put(id[i],name[i]);
             i++;
         }
-        l.log(Level.INFO, "The Employees id and name are:"+map);
+        l.log(Level.INFO,()-> "The Employees id and name are:"+map);
         map.putIfAbsent(103, "jeeva");
-        l.log(Level.INFO, "The updated Employee list:"+map);
+        l.log(Level.INFO,()-> "The updated Employee list:"+map);
         map.remove(104);
-        l.log(Level.INFO, "The Employee list after remove based on key:"+map);
+        l.log(Level.INFO,()-> "The Employee list after remove based on key:"+map);
         map.remove(102, "sangee");
-        l.log(Level.INFO, "The Employee list after remove:"+map);
+        l.log(Level.INFO, ()->"The Employee list after remove:"+map);
         map.replace(103, "monsi");
-        l.log(Level.INFO, "The Employee list after replacing:"+map);
+        l.log(Level.INFO, ()->"The Employee list after replacing:"+map);
         map.replace(101, "bhuvana", "vijay");
-        l.log(Level.INFO, "The Employee list after replacing:"+map);
+        l.log(Level.INFO, ()->"The Employee list after replacing:"+map);
         HashMap<Integer,String> map1=new HashMap<Integer,String>();
         map.put(105,"latha");
         map1.putAll(map);
-        l.log(Level.INFO, "The new Employee list:"+map1);
+        l.log(Level.INFO,()-> "The new Employee list:"+map1);
         map1.replaceAll((k,v) -> "jothi");
-        l.log(Level.INFO, "The Employee list after replacing:"+map1);
+        l.log(Level.INFO, ()-> "The Employee list after replacing:"+map1);
         map1.clear();
-        l.log(Level.INFO, "The Employee list after clear:"+map1);
+        l.log(Level.INFO,()-> "The Employee list after clear:"+map1);
         if(map1.isEmpty())
             l.info("The Employee list is Empty");
         else
