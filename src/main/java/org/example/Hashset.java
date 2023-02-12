@@ -17,10 +17,10 @@ class Hashset {
             set.add(s.nextLine());
             i++;
         }
-        l.log(Level.INFO, "The Employees name are:"+set);
+        l.log(Level.INFO,()-> "The Employees name are:"+set);
         l.info("Enter Employees name to remove:");
         set.remove(s.nextLine());
-        l.log(Level.INFO, "After remove the employee name:"+set);
+        l.log(Level.INFO,()-> "After remove the employee name:"+set);
         l.info("Enter Employees name to check:");
         if(set.contains(s.nextLine()))
             l.info("The name is present in the set");
@@ -29,11 +29,11 @@ class Hashset {
         HashSet<String> set1 = new HashSet<>(set);
         set1.addAll(set);
         set1.add("sri");
-        l.log(Level.INFO,"The new Employee set is: "+set1);
+        l.log(Level.INFO,()->"The new Employee set is: "+set1);
         set1.removeAll(set);
-        l.log(Level.INFO,"After remove all in set1: "+set1);
+        l.log(Level.INFO,()->"After remove all in set1: "+set1);
         set.clear();
-        l.log(Level.INFO,"After clearing Employee set: "+set);
+        l.log(Level.INFO,()->"After clearing Employee set: "+set);
         if(set.isEmpty())
             l.info("The Employee set is empty");
         else
